@@ -38,6 +38,15 @@
       </style>
       <script>
       window.location.href = "about:blank";
+      // Open a new window or tab
+var newWindow = window.open();
+
+// Create a new element
+var h1 = newWindow.document.createElement("h1");
+h1.textContent = "Hello, World!";
+
+// Append the new element to the body
+newWindow.document.body.appendChild(h1);
       </script>
   
 </html>
