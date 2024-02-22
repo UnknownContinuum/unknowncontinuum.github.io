@@ -1,41 +1,33 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html>
 <head>
-    <title>Coding Tools</title>
+    <title>HTML Elements Info</title>
     <style>
-        #secretMessage {
-            display: none;
-        }
-        #secretButton {
-            display: none;
-        }
+        body { font-family: Arial, sans-serif; }
+        .element { margin-bottom: 20px; }
+        .element h2 { color: #333; }
+        .element p { color: #666; }
     </style>
 </head>
 <body>
-    <h1>Welcome to the Coding Tools Website!</h1>
-    <p>Here you can find various tools to assist you in your coding journey.</p>
+    <h1>HTML Elements Info</h1>
 
-    <!-- Secret Entrance -->
-    <button id="secretButton" onclick="revealSecret()">Click me</button>
-
-    <div id="secretMessage">
-        <h2>You've found the secret entrance!</h2>
-        <p>Welcome to the secret section of the website.</p>
+    <div class="element">
+        <h2>&lt;div&gt;</h2>
+        <p>The &lt;div&gt; tag defines a division or a section in an HTML document.</p>
+        <a href="javascript:alert('<div> tag defines a division or a section in an HTML document.')">Bookmarklet for &lt;div&gt;</a>
     </div>
 
-    <script>
-        // Function to reveal the secret message
-        function revealSecret() {
-            document.getElementById('secretMessage').style.display = 'block';
-        }
+    <div class="element">
+        <h2>&lt;p&gt;</h2>
+        <p>The &lt;p&gt; tag defines a paragraph.</p>
+        <a href="javascript:alert('<p> tag defines a paragraph.')">Bookmarklet for &lt;p&gt;</a>
+    </div>
 
-        // Function to reveal the secret button
-        window.onload = function() {
-            if(window.location.href.indexOf('unknowncontinuum.github.io/code-elements/') > -1) {
-                document.getElementById('secretButton').style.display = 'block';
-            }
-        }
+    <!-- Add more elements as needed -->
+
+    <script>
+        // You can add more JavaScript code here
     </script>
 </body>
 </html>
