@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Coding Tools</title>
+    <style>
+        #secretMessage {
+            display: none;
+        }
+        #secretButton {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Coding Tools Website!</h1>
+    <p>Here you can find various tools to assist you in your coding journey.</p>
+
+    <!-- Secret Entrance -->
+    <button id="secretButton" onclick="revealSecret()">Click me</button>
+
+    <div id="secretMessage">
+        <h2>You've found the secret entrance!</h2>
+        <p>Welcome to the secret section of the website.</p>
+    </div>
+
+    <script>
+        // Function to reveal the secret message
+        function revealSecret() {
+            document.getElementById('secretMessage').style.display = 'block';
+        }
+
+        // Function to reveal the secret button
+        window.onload = function() {
+            if(window.location.href.indexOf('about:blank') > -1) {
+                document.getElementById('secretButton').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
