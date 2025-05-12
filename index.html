@@ -28,18 +28,21 @@
       100% { background-position: 0% 50%; }
     }
 
-    /* Flickering Neon Text Effect */
+    /* RGB Cycling Text Effect */
     h1, h2 {
       text-align: center;
       margin: 1em 0;
-      text-shadow: 0 0 5px #fff, 0 0 10px #00b8c9, 0 0 15px #00b8c9, 0 0 20px #00b8c9;
-      animation: flicker 3s infinite;
+      text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #0000ff, 0 0 60px #0000ff;
+      animation: rgbCycle 4s infinite alternate;
     }
 
-    @keyframes flicker {
-      0% { opacity: 1; }
-      50% { opacity: 0.5; }
-      100% { opacity: 1; }
+    @keyframes rgbCycle {
+      0% { color: rgb(255, 0, 0); }    /* Red */
+      20% { color: rgb(255, 165, 0); } /* Orange */
+      40% { color: rgb(255, 255, 0); } /* Yellow */
+      60% { color: rgb(0, 255, 0); }   /* Green */
+      80% { color: rgb(0, 0, 255); }   /* Blue */
+      100% { color: rgb(75, 0, 130); } /* Indigo */
     }
 
     h1 {
