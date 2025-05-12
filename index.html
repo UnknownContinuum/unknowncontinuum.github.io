@@ -1,98 +1,108 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <!--A comment is this-->
-    <link rel="icon" type="image/x-icon" href="https://dictionary.nin0dev.com/static-assets/favicon-presets/google.ico">
-    <title>Homepage</title>
-    <style>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="https://dictionary.nin0dev.com/static-assets/favicon-presets/google.ico" type="image/x-icon">
+  <title>Homepage</title>
+  <style>
     body {
-        background-color: rgb(85, 85, 85);
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
-</style>
-<style>
-  h1 {
-    text-align: center;
-  }
-  h2 {
-    text-align: center;
-  }
-</style>
-<h1>Unknowncontinuum.github.io</h1>
-    <h2>coding website</h2>
-    <style>
-      body {
 
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    h1, h2 {
+      text-align: center;
+      margin: 0.5em 0;
+      text-shadow: 0 0 15px #0ff, 0 0 25px #0ff;
+    }
 
-      }
-      
-      .my-button {
-    background-color: white;
-    color: black;
-    border: none;
-    transition: background-color 0.5s ease;
-  }
+    h1 {
+      font-size: 2.8rem;
+    }
 
-  .my-button:hover {
-    background: linear-gradient(to bottom right, #3dc5f4, #00b8c9);
-    color: white;
-  }
-      
+    h2 {
+      font-size: 1.5rem;
+      color: #a0f0ff;
+    }
 
-      button {
-        cursor: pointer;
-      }
+    .nav-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 30px 0;
+      gap: 20px;
+    }
 
-      button {
-        cursor: pointer;
-      }
+    .zoom {
+      transition: transform 0.2s, box-shadow 0.3s;
+    }
 
-     
+    .zoom:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px #00f7ff, 0 0 30px #00f7ff;
+    }
 
+    button {
+      width: 140px;
+      height: 60px;
+      border-radius: 8px;
+      border: none;
+      font-size: 18px;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: bold;
+      background: #111;
+      color: #0ff;
+      cursor: pointer;
+      box-shadow: 0 0 8px #0ff;
+      transition: background 0.3s, color 0.3s;
+    }
 
-      button:hover {
-        background-color: rgba(230, 230, 230, 0.7);
-    opacity: 0.9;
-    transition: .2s;
-}
+    button:hover {
+      background: #0ff;
+      color: #000;
+    }
 
-button:focus {
-    outline: none;
-}
+    a {
+      text-decoration: none;
+    }
 
-      .zoom {
-        transition: transform .2s;
-      }
+    footer {
+      margin-top: auto;
+      padding: 20px;
+      font-size: 12px;
+      color: #ccc;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Unknowncontinuum.github.io</h1>
+  <h2>Coding Website</h2>
 
-      .zoom:hover {
-        transform: scale(1.1);
-      }
+  <div class="nav-buttons">
+    <a href="https://unknowncontinuum.github.io/about">
+      <button class="zoom">About</button>
+    </a>
+    <a href="https://unknowncontinuum.github.io/code-elements">
+      <button class="zoom">Code Elements</button>
+    </a>
+    <a href="https://crazygird.github.io/html/html tools/html tools">
+      <button class="zoom">GitHub</button>
+    </a>
+    <a href="https://unknowncontinuum.github.io/todo-list">
+      <button class="zoom">To Do List</button>
+    </a>
+  </div>
 
-      a {
-        color: white
-      }
-
-    </style>
-  </head>
-  <body>
-    <div style="font-family: 'Roboto', sans-serif; display: flex; justify-content: center;">
-      <a href="https://unknowncontinuum.github.io/about">
-        <button class="zoom" id="yes" style="width: 130px;height: 60px; border-radius: 5px; border-width: 0;  font-size: 20px; color: #2b2d31; font-family: 'JetBrains+Mono', sans-serif; font-weight:150;">About</button>
-      </a>
-      <a href="https://unknowncontinuum.github.io/code-elements">
-        <button class="zoom" id="about" style="width: 130px; height: 60px; border-radius: 5px; margin-left: 14px; border-width: 0;  font-size: 20px; font-family: 'JetBrains+Mono', sans-serif; font-weight: 150;">Code elements</button> 
-      </a>
-      <a href="https://crazygird.github.io/html/html tools/html tools">
-        <button class="zoom" id="about" style="width: 130px; height: 60px; border-radius: 5px; margin-left: 14px; border-width: 0;  font-size: 20px; font-family: 'JetBrains+Mono', sans-serif; font-weight: 150;">Github</button>
-      </a>
-      <a href="https://unknowncontinuum.github.io/todo-list">
-        <button class="zoom" id="about" style="width: 130px; height: 60px; border-radius: 5px; margin-left: 14px; border-width: 0;  font-size: 20px; font-family: 'JetBrains+Mono', sans-serif; font-weight: 150;">To do list</button>
-      </a>
-    </div>
-    <div style="bottom: 5px; display: flex; justify-content: center; font-family: 'Roboto' sans-serif; color:white; size: 5px;">
-      
-    </div>
-    </div>
-  </body>
+  <footer>
+    &copy; 2025 Unknown Continuum. All rights reserved.
+  </footer>
+</body>
 </html>
