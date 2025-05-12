@@ -3,32 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <link rel="icon" href="https://dictionary.nin0dev.com/static-assets/favicon-presets/google.ico" type="image/x-icon">
-  <title>Homepage</title>
+  <title>HOMEPAGE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       padding: 0;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(145deg, #0f0f3a, #111134, #1c1c5a);
+      font-family: 'Orbitron', sans-serif;
       color: #ffffff;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
+      text-transform: uppercase;
     }
 
     h1, h2 {
       text-align: center;
-      margin: 0.5em 0;
-      text-shadow: 0 0 15px #0ff, 0 0 25px #0ff;
+      margin: 1em 0 0.5em;
+      text-shadow: 0 0 10px #0ff, 0 0 20px #00f;
+      letter-spacing: 2px;
     }
 
     h1 {
-      font-size: 2.8rem;
+      font-size: 3rem;
     }
 
     h2 {
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       color: #a0f0ff;
     }
 
@@ -36,37 +39,40 @@
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      margin: 30px 0;
-      gap: 20px;
+      margin: 40px 0;
+      gap: 18px;
     }
 
     .zoom {
-      transition: transform 0.2s, box-shadow 0.3s;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
 
     .zoom:hover {
-      transform: scale(1.1);
-      box-shadow: 0 0 20px #00f7ff, 0 0 30px #00f7ff;
+      transform: scale(1.08);
+      box-shadow: 0 0 20px #00f7ff, 0 0 35px #00f7ff;
     }
 
     button {
-      width: 140px;
+      width: 150px;
       height: 60px;
-      border-radius: 8px;
+      border-radius: 40px;
       border: none;
-      font-size: 18px;
-      font-family: 'JetBrains Mono', monospace;
-      font-weight: bold;
-      background: #111;
+      font-size: 16px;
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 700;
+      background: rgba(0, 255, 255, 0.1);
+      backdrop-filter: blur(6px);
       color: #0ff;
       cursor: pointer;
-      box-shadow: 0 0 8px #0ff;
-      transition: background 0.3s, color 0.3s;
+      letter-spacing: 1.5px;
+      border: 2px solid #0ff;
+      transition: all 0.3s ease-in-out;
     }
 
     button:hover {
       background: #0ff;
       color: #000;
+      box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
     }
 
     a {
@@ -76,33 +82,34 @@
     footer {
       margin-top: auto;
       padding: 20px;
-      font-size: 12px;
-      color: #ccc;
+      font-size: 11px;
+      color: #888;
       text-align: center;
+      text-transform: none;
     }
   </style>
 </head>
 <body>
-  <h1>Unknowncontinuum.github.io</h1>
-  <h2>Coding Website</h2>
+  <h1>UNKNOWNCONTINUUM.GITHUB.IO</h1>
+  <h2>CODING WEBSITE</h2>
 
   <div class="nav-buttons">
     <a href="https://unknowncontinuum.github.io/about">
-      <button class="zoom">About</button>
+      <button class="zoom">ABOUT</button>
     </a>
     <a href="https://unknowncontinuum.github.io/code-elements">
-      <button class="zoom">Code Elements</button>
+      <button class="zoom">CODE ELEMENTS</button>
     </a>
     <a href="https://crazygird.github.io/html/html tools/html tools">
-      <button class="zoom">GitHub</button>
+      <button class="zoom">GITHUB</button>
     </a>
     <a href="https://unknowncontinuum.github.io/todo-list">
-      <button class="zoom">To Do List</button>
+      <button class="zoom">TO DO LIST</button>
     </a>
   </div>
 
   <footer>
-    &copy; 2025 Unknown Continuum. All rights reserved.
+    &copy; 2025 Unknown Continuum. All Rights Reserved.
   </footer>
 </body>
 </html>
