@@ -6,10 +6,13 @@
   <title>HOMEPAGE</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
   <style>
+    /* Animated Gradient Background */
     body {
       margin: 0;
       padding: 0;
-      background: linear-gradient(145deg, #0f0f3a, #111134, #1c1c5a);
+      background: linear-gradient(-45deg, #ff6ec7, #ff9a8b, #ffcd00, #4facfe);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
       font-family: 'Orbitron', sans-serif;
       color: #ffffff;
       min-height: 100vh;
@@ -19,11 +22,24 @@
       text-transform: uppercase;
     }
 
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Flickering Neon Text Effect */
     h1, h2 {
       text-align: center;
-      margin: 1em 0 0.5em;
-      text-shadow: 0 0 10px #0ff, 0 0 20px #00f;
-      letter-spacing: 2px;
+      margin: 1em 0;
+      text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff, 0 0 15px #ff00ff, 0 0 20px #ff00ff;
+      animation: flicker 3s infinite;
+    }
+
+    @keyframes flicker {
+      0% { opacity: 1; }
+      50% { opacity: 0.5; }
+      100% { opacity: 1; }
     }
 
     h1 {
@@ -31,25 +47,17 @@
     }
 
     h2 {
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       color: #a0f0ff;
     }
 
+    /* Navigation Buttons */
     .nav-buttons {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       margin: 40px 0;
       gap: 18px;
-    }
-
-    .zoom {
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .zoom:hover {
-      transform: scale(1.08);
-      box-shadow: 0 0 20px #00f7ff, 0 0 35px #00f7ff;
     }
 
     button {
@@ -95,21 +103,29 @@
 
   <div class="nav-buttons">
     <a href="https://unknowncontinuum.github.io/about">
-      <button class="zoom">ABOUT</button>
+      <button onmouseover="playHoverSound()">ABOUT</button>
     </a>
     <a href="https://unknowncontinuum.github.io/code-elements">
-      <button class="zoom">CODE ELEMENTS</button>
+      <button onmouseover="playHoverSound()">CODE ELEMENTS</button>
     </a>
     <a href="https://crazygird.github.io/html/html tools/html tools">
-      <button class="zoom">GITHUB</button>
+      <button onmouseover="playHoverSound()">GITHUB</button>
     </a>
     <a href="https://unknowncontinuum.github.io/todo-list">
-      <button class="zoom">TO DO LIST</button>
+      <button onmouseover="playHoverSound()">TO DO LIST</button>
     </a>
   </div>
 
   <footer>
     &copy; 2025 Unknown Continuum. All Rights Reserved.
   </footer>
+
+  <audio id="hover-sound" src="https://www.soundjay.com/button/beep-07.wav" preload="auto"></audio>
+
+  <script>
+    function playHoverSound() {
+      document.getElementById('hover-sound').play();
+    }
+  </script>
 </body>
 </html>
