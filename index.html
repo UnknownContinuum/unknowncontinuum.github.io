@@ -4,31 +4,21 @@
   <meta charset="UTF-8">
   <link rel="icon" href="https://dictionary.nin0dev.com/static-assets/favicon-presets/google.ico" type="image/x-icon">
   <title>AI BLOG</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* Animated Gradient Background */
+    /* Background and General Styling */
     body {
       margin: 0;
       padding: 0;
-      background: linear-gradient(-45deg, #1e1e1e, #2b2b2b, #0f172a, #00b8c9);
-      background-size: 400% 400%;
-      animation: gradientBG 15s ease infinite;
-      font-family: 'Orbitron', sans-serif;
-      color: #ffffff;
-      min-height: 100vh;
+      background-color: #f4f4f9;
+      font-family: 'Roboto', sans-serif;
+      color: #333;
       display: flex;
       flex-direction: column;
       align-items: center;
-      text-transform: uppercase;
+      text-transform: none;
     }
 
-    @keyframes gradientBG {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    /* Header Section */
     header {
       text-align: center;
       margin: 2rem 0;
@@ -36,25 +26,16 @@
 
     h1 {
       font-size: 3.5rem;
-      text-shadow: 0 0 15px #ff0000, 0 0 20px #ff0000, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #0000ff, 0 0 60px #0000ff;
-      animation: rgbCycle 4s infinite alternate;
+      color: #333;
     }
 
     h2 {
       font-size: 1.5rem;
-      color: #a0f0ff;
+      color: #555;
+      margin-top: 0.5rem;
     }
 
-    @keyframes rgbCycle {
-      0% { color: rgb(255, 0, 0); }
-      20% { color: rgb(255, 165, 0); }
-      40% { color: rgb(255, 255, 0); }
-      60% { color: rgb(0, 255, 0); }
-      80% { color: rgb(0, 0, 255); }
-      100% { color: rgb(75, 0, 130); }
-    }
-
-    /* Blog Content */
+    /* Blog Content Layout */
     .content {
       max-width: 1200px;
       width: 100%;
@@ -63,31 +44,33 @@
       margin-top: 40px;
       padding: 0 20px;
       gap: 20px;
+      flex-wrap: wrap;
     }
 
+    /* Blog Section Styling */
     .blog-section {
       width: 45%;
-      background: rgba(0, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
+      background: #fff;
       border-radius: 8px;
       padding: 20px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
     }
 
     .blog-section h3 {
       font-size: 1.8rem;
-      color: #fff;
+      color: #333;
       margin-bottom: 10px;
     }
 
     .blog-section p {
       font-size: 1.1rem;
       line-height: 1.8;
-      color: #ddd;
+      color: #555;
     }
 
     .blog-section a {
-      color: #00b8c9;
+      color: #007bff;
       text-decoration: none;
       font-weight: bold;
     }
@@ -96,7 +79,7 @@
       text-decoration: underline;
     }
 
-    /* Navigation Buttons */
+    /* Navigation Buttons Styling */
     .nav-buttons {
       display: flex;
       justify-content: center;
@@ -111,21 +94,16 @@
       border-radius: 25px;
       border: none;
       font-size: 16px;
-      font-family: 'Orbitron', sans-serif;
       font-weight: 700;
-      background: rgba(0, 255, 255, 0.1);
-      backdrop-filter: blur(6px);
-      color: #0ff;
+      background-color: #007bff;
+      color: #fff;
       cursor: pointer;
-      letter-spacing: 1.5px;
-      border: 2px solid #0ff;
+      letter-spacing: 1px;
       transition: all 0.3s ease-in-out;
     }
 
     button:hover {
-      background: #00b8c9;
-      color: #000;
-      box-shadow: 0 0 10px #00b8c9, 0 0 20px #00b8c9;
+      background-color: #0056b3;
     }
 
     footer {
@@ -134,7 +112,6 @@
       font-size: 11px;
       color: #888;
       text-align: center;
-      text-transform: none;
     }
   </style>
 </head>
